@@ -1,0 +1,31 @@
+# Logs
+*.log
+
+# Docker
+*.env
+.env*
+
+# Node/npm (caso use)
+node_modules/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# PHP
+vendor/
+composer.lock
+
+# Editor
+.vscode/
+.idea/
+
+# Outros
+*.swp
+*.bak
+
+# Git
+.git/
+
+# Pasta de testes
+primeiro-semestre/testes/
