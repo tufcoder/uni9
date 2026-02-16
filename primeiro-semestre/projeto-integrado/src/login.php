@@ -6,13 +6,15 @@
     <title>Projeto Integrado Uninove</title>
   </head>
   <body>
-    <h1>Projeto Integrado</h1>
-    <form method="POST">
-      <label for="name">Email</label>
-      <input type="text" name="email" id="email" placeholder="example@email.com">
-      <label for="name">Senha</label>
-      <input type="password" name="password" id="password">
-      <button type="submit">Login</button>
-    </form>
+    <div id="app">
+      <h1>Projeto Integrado</h1>
+      <form method="POST">
+        <label for="name">Email</label>
+        <input type="text" name="email" id="email" placeholder="exemplo@email.com">
+        <label for="name">Senha</label>
+        <input type="password" name="password" id="password">
+        <button type="submit">Login</button>
+      </form>
+    </div>
   </body>
 </html>
