@@ -13,8 +13,15 @@ services:
     image: php:8.3-fpm
     volumes:
       - .:/var/www/html
+    working_dir: /var/www/html
     command: >
-      sh -c "docker-php-ext-install pdo_mysql && php-fpm"
+      sh -c "\
+        apt-get update && \
+        apt-get install -y unzip git && \
+        docker-php-ext-install pdo_mysql && \
+        curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
+        if [ -f composer.json ]; then composer install; fi && \
+        php-fpm"
 
   db:
     image: mysql:8.0

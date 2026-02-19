@@ -4,6 +4,7 @@
 # Docker
 *.env
 .env*
+!.env-example
 
 # Node/npm (caso use)
 node_modules/

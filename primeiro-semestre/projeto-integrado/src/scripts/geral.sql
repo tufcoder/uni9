@@ -9,6 +9,7 @@ CREATE TABLE IF NOT EXISTS users (
 	id int NOT NULL PRIMARY KEY auto_increment,
 	cpf varchar(11) not null unique,
 	password varchar(100) not null,
+	name varchar(100) NULL,
 	created_at datetime not null default CURRENT_TIMESTAMP,
 	updated_at datetime not null default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP
 );
@@ -39,7 +40,7 @@ INSERT INTO roles (role) values ('Coordenador');
 INSERT INTO roles (role) values ('Professor');
 
 INSERT INTO users (cpf, password) values ('12345678909', '1234');
-INSERT INTO users (cpf, password) values ('09876543211', '1234');
+INSERT INTO users (cpf, password, name) values ('09876543211', '1234', 'John Doe');
 INSERT INTO users (cpf, password) values ('23456789010', '1234');
 INSERT INTO users (cpf, password) values ('34567890122', '1234');
 
@@ -56,4 +57,5 @@ SELECT
 	,u.*
 FROM users u
 	INNER JOIN user_roles ur ON u.id = ur.user_id
-	INNER JOIN roles r ON ur.role_id = r.id;
+	INNER JOIN roles r ON ur.role_id = r.id
+	;
