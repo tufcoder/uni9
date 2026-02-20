@@ -1,5 +1,5 @@
 <?php
-	session_start();
+	// session_start() já é chamado no front controller (index.php)
 	if (!isset($_SESSION['user'])) {
 		header('Location: /index.php');
 		exit;
@@ -63,19 +63,23 @@
 			border-radius: 8px;
 			box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 		}
+
+		.logout-form {
+			margin: 0;
+		}
 		</style>
 	</head>
 	<body>
-	<div class="header">
+	<header class="header">
 		<span class="header-title">Uninove</span>
-		<form method="post" action="/src/logout.php" style="margin:0;">
+		<form method="post" action="/logout" class="logout-form">
 			<button type="submit" class="logout-btn">Deslogar</button>
 		</form>
-	</div>
-	<div class="center-container">
-		<div class="home-wrapper">
+	</header>
+	<main class="center-container">
+		<section class="home-wrapper">
 			<h1>Olá, <?php echo $user; ?>!</h1>
-		</div>
-	</div>
+		</section>
+	</main>
 	</body>
 </html>

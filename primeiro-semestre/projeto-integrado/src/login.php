@@ -2,6 +2,9 @@
 require_once __DIR__ . '/db.php';
 // Lógica de autenticação, define $error se necessário
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  if (session_status() !== PHP_SESSION_ACTIVE) {
+    session_start();
+  }
   $idType = isset($_POST['id-type']) ? $_POST['id-type'] : '';
   if ($idType === 'ra' && isset($_POST['ra'])) {
     $ra = $_POST['ra'];
@@ -10,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       $user = getUserByRA($pdo, $ra);
       if ($user && $user['password'] === $password) {
         $_SESSION['user'] = $user['name'] ? $user['name'] : $user['cpf'];
-        header('Location: /pages/home.php');
+        header('Location: /home');
         exit;
       } else {
         $error = 'RA ou senha inválidos.';
@@ -25,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       $user = getUserByCPF($pdo, $cpf);
       if ($user && $user['password'] === $password) {
         $_SESSION['user'] = $user['name'] ? $user['name'] : $user['cpf'];
-        header('Location: /pages/home.php');
+        header('Location: /home');
         exit;
       } else {
         $error = 'CPF ou senha inválidos.';
