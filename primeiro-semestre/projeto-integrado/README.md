@@ -19,18 +19,15 @@ Este é um sistema web desenvolvido em PHP para o Projeto Integrado do curso da 
    ```bash
    docker-compose up -d
    ```
-3. Crie o banco e as tabelas executando o script SQL dentro do container do banco:
+3. Crie o banco e as tabelas executando o script SQL manualmente dentro do container do banco:
    ```bash
-   docker exec -it <nome-ou-id-do-container-db> mysql -u root -p < /var/www/html/src/scripts/geral.sql
-   ```
-   (A senha padrão é `root`)
-   
-   Ou conecte-se ao MySQL e rode o script manualmente:
-   ```bash
-   docker exec -it <nome-ou-id-do-container-db> mysql -u root -p
+   docker exec -it <nome-ou-id-do-container-db> bash
+   # Dentro do container:
+   mysql -u root -p
    # No prompt do MySQL:
    source /var/www/html/src/scripts/geral.sql;
    ```
+   (A senha padrão é `root`)
 4. Acesse `http://localhost:8080` no navegador.
 
 ---
