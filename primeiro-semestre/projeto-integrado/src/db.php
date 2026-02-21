@@ -3,15 +3,6 @@
 
 require_once __DIR__ . '/connection.php';
 
-function getUserByCPF(PDO $pdo, string $cpf) {
-    $sql = "SELECT id, cpf, name, password "
-         . "FROM users "
-         . "WHERE cpf = ?";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([$cpf]);
-    return $stmt->fetch();
-}
-
 function getUserByRA(PDO $pdo, string $ra) {
     $sql = "SELECT u.id, u.cpf, u.name, u.password "
          . "FROM users u "
@@ -19,5 +10,14 @@ function getUserByRA(PDO $pdo, string $ra) {
          . "WHERE s.ra = ?";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$ra]);
+    return $stmt->fetch();
+}
+
+function getUserByCPF(PDO $pdo, string $cpf) {
+    $sql = "SELECT id, cpf, name, password "
+         . "FROM users "
+         . "WHERE cpf = ?";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$cpf]);
     return $stmt->fetch();
 }

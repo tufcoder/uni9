@@ -1,26 +1,24 @@
 <?php
-	// session_start() já é chamado no front controller (index.php)
-	if (!isset($_SESSION['user'])) {
-		header('Location: /index.php');
-		exit;
-	}
-	$user = htmlspecialchars($_SESSION['user']);
+// session_start() já é chamado no front controller (index.php)
+if (!isset($_SESSION['user'])) {
+  header('Location: /index.php');
+  exit;
+}
+$user = htmlspecialchars($_SESSION['user']);
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
-	<head>
-		<meta charset="UTF-8">
-		<title>Home</title>
-		<style>
 
-		body {
-			background: #f5f5f5;
-		}
-		.center-container {
-			min-height: 100vh;
-			display: grid;
-			place-items: center;
-		}
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .center-container {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+    }
 
     .header {
       width: 100%;
@@ -29,7 +27,7 @@
       justify-content: space-between;
       padding: 1rem 2rem;
       background: #fff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
       margin-bottom: 2rem;
       box-sizing: border-box;
     }
@@ -57,29 +55,32 @@
       background: #b71c1c;
     }
 
-		.home-wrapper {
-			background: #fff;
-			padding: 2rem 3rem;
-			border-radius: 8px;
-			box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-		}
+    .home-wrapper {
+      padding: 2rem 3rem;
+      border-radius: 8px;
+      font-size: 3rem;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
 
-		.logout-form {
-			margin: 0;
-		}
-		</style>
-	</head>
-	<body>
-	<header class="header">
-		<span class="header-title">Uninove</span>
-		<form method="post" action="/logout" class="logout-form">
-			<button type="submit" class="logout-btn">Deslogar</button>
-		</form>
-	</header>
-	<main class="center-container">
-		<section class="home-wrapper">
-			<h1>Olá, <?php echo $user; ?>!</h1>
-		</section>
-	</main>
-	</body>
+    .logout-form {
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <span class="header-title">Uninove</span>
+    <form method="post" action="/logout" class="logout-form">
+      <button type="submit" class="logout-btn">Deslogar</button>
+    </form>
+  </header>
+  <main class="center-container">
+    <section class="home-wrapper">
+      <h1>Olá, <?php echo $user; ?>!</h1>
+    </section>
+  </main>
+</body>
+
 </html>

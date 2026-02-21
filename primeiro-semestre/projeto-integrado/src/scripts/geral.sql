@@ -1,3 +1,12 @@
+-- Criação do banco de dados, charset, collation e timezone
+CREATE DATABASE IF NOT EXISTS uninove
+	DEFAULT CHARACTER SET utf8mb4
+	DEFAULT COLLATE utf8mb4_0900_ai_ci;
+
+USE uninove;
+
+SET time_zone = '+00:00';
+
 CREATE TABLE IF NOT EXISTS roles (
 	id int NOT NULL PRIMARY KEY auto_increment,
 	role varchar(50) NOT NULL UNIQUE,
@@ -52,10 +61,13 @@ INSERT INTO user_roles (user_id, role_id) values (4, 3);
 
 INSERT INTO students (user_id, ra) values (2, '1234567890');
 
+-- query para trazer todos os users que são students
 SELECT
 	r.role
+	,s.ra
 	,u.*
 FROM users u
 	INNER JOIN user_roles ur ON u.id = ur.user_id
 	INNER JOIN roles r ON ur.role_id = r.id
-	;
+	INNER JOIN  students s ON u.id = s.user_id
+;

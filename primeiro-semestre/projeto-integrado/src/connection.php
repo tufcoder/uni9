@@ -16,6 +16,10 @@ try {
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
   ]);
 } catch (PDOException $e) {
-  // Em produção, nunca mostre o erro real ($e->getMessage())
-  die("Erro ao conectar ao banco de dados.");
+  $env = $_ENV['APP_ENV'] ?? 'production';
+  if ($env === 'development') {
+    die("Erro ao conectar ao banco de dados: " . $e->getMessage());
+  } else {
+    die("Erro ao conectar ao banco de dados.");
+  }
 }

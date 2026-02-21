@@ -1,42 +1,64 @@
 <?php
 require_once __DIR__ . '/db.php';
-// Lógica de autenticação, define $error se necessário
+
+// Lógica de autenticação simplificada
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   if (session_status() !== PHP_SESSION_ACTIVE) {
     session_start();
   }
+
   $idType = isset($_POST['id-type']) ? $_POST['id-type'] : '';
+  $password = isset($_POST['password']) ? $_POST['password'] : '';
+  $idValue = '';
+
   if ($idType === 'ra' && isset($_POST['ra'])) {
-    $ra = $_POST['ra'];
-    $password = isset($_POST['password']) ? $_POST['password'] : '';
-    if (!empty($ra) && !empty($password)) {
-      $user = getUserByRA($pdo, $ra);
-      if ($user && $user['password'] === $password) {
-        $_SESSION['user'] = $user['name'] ? $user['name'] : $user['cpf'];
-        header('Location: /home');
-        exit;
-      } else {
-        $error = 'RA ou senha inválidos.';
-      }
-    } else {
-      $error = 'Preencha todos os campos.';
-    }
+    $idValue = $_POST['ra'];
   } elseif ($idType === 'cpf' && isset($_POST['cpf'])) {
-    $cpf = $_POST['cpf'];
-    $password = isset($_POST['password']) ? $_POST['password'] : '';
-    if (!empty($cpf) && !empty($password)) {
-      $user = getUserByCPF($pdo, $cpf);
-      if ($user && $user['password'] === $password) {
-        $_SESSION['user'] = $user['name'] ? $user['name'] : $user['cpf'];
-        header('Location: /home');
-        exit;
-      } else {
-        $error = 'CPF ou senha inválidos.';
-      }
-    } else {
-      $error = 'Preencha todos os campos.';
-    }
-  } else {
-    $error = 'Selecione RA ou CPF.';
+    $idValue = $_POST['cpf'];
   }
+
+  $result = authenticateUser($pdo, $idType, $idValue, $password);
+
+  if ($result['user']) {
+    $_SESSION['user'] = $result['user']['name'] ? $result['user']['name'] : $result['user']['cpf'];
+    header('Location: /home');
+    exit;
+  } else {
+    $error = $result['error'];
+  }
+}
+
+function authenticateUser($pdo, $idType, $idValue, $password)
+{
+  if (empty($idValue) || empty($password)) {
+    return ["user" => null, "error" => 'Preencha todos os campos.'];
+  }
+
+  if ($idType !== 'ra' && $idType !== 'cpf') {
+    return ["user" => null, "error" => 'Selecione RA ou CPF.'];
+  }
+
+  $user = getUser($pdo, $idType, $idValue);
+
+  if ($user && isPasswordValid($user, $password)) {
+    return ["user" => $user, "error" => null];
+  } else {
+    $msg = $idType === 'ra' ? 'RA ou senha inválidos.' : 'CPF ou senha inválidos.';
+    return ["user" => null, "error" => $msg];
+  }
+}
+
+function getUser($pdo, $idType, $idValue)
+{
+  if ($idType === 'ra') {
+    return getUserByRA($pdo, $idValue);
+  } elseif ($idType === 'cpf') {
+    return getUserByCPF($pdo, $idValue);
+  }
+  return null;
+}
+
+function isPasswordValid($user, $password)
+{
+  return isset($user['password']) && $user['password'] === $password;
 }
