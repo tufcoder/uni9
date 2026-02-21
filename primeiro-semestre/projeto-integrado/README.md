@@ -8,10 +8,11 @@ Este é um sistema web desenvolvido em PHP para o Projeto Integrado do curso da 
 - Separação de responsabilidades no código (MVC simplificado)
 
 ## Estrutura
-- `public/` — arquivos públicos e páginas acessíveis pelo navegador
+- `index.php` — arquivo principal do sistema
+- `pages/` — páginas acessíveis pelo navegador
+- `css/` — estilos globais compartilhados
 - `src/` — scripts PHP de backend (conexão, autenticação, etc)
 - `vendor/` — dependências gerenciadas pelo Composer
-- `public/css/` — estilos globais compartilhados
 
 ## Como rodar
 1. Configure o arquivo `.env` com os dados do banco e ambiente.
@@ -28,7 +29,7 @@ Este é um sistema web desenvolvido em PHP para o Projeto Integrado do curso da 
    source /var/www/html/src/scripts/geral.sql;
    ```
    (A senha padrão é `root`)
-4. Acesse `http://localhost:8080` no navegador.
+4. Acesse `http://localhost:8080` no navegador (index.php na raiz).
 
 ---
 
