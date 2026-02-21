@@ -31,6 +31,30 @@ Este é um sistema web desenvolvido em PHP para o Projeto Integrado do curso da 
    (A senha padrão é `root`)
 4. Acesse `http://localhost:8080` no navegador (index.php na raiz).
 
+## Publicação em produção
+
+Para publicar o projeto em produção (ex: Byethost ou outro servidor), crie uma pasta `dist` ou `_dist` na raiz do projeto e coloque nela apenas os arquivos necessários para o deploy:
+
+- `index.php`
+- `pages/`
+- `css/`
+- `src/`
+- `vendor/`
+- `.env` (com as configurações de produção)
+- `composer.json` e `composer.lock`
+
+O arquivo `.env-example` serve como modelo de configuração. Antes de publicar, copie ou renomeie o `.env-example` para `.env` e edite com os dados do banco de dados e ambiente de produção:
+
+```
+DB_HOST=host_do_banco
+DB_NAME=nome_do_banco
+DB_USER=usuario_do_banco
+DB_PASS=senha_do_banco
+APP_ENV=production
+```
+
+Depois compacte a pasta dist/_dist e faça o upload para o servidor, extraindo os arquivos na pasta pública (ex: htdocs). Assim, qualquer pessoa pode preparar o projeto para publicação de forma organizada e segura.
+
 ---
 
 > Projeto acadêmico — Uninove, 2026
