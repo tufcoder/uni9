@@ -31,19 +31,26 @@ Este é um sistema web desenvolvido em PHP para o Projeto Integrado do curso da 
    (A senha padrão é `root`)
 4. Acesse `http://localhost:8080` no navegador (index.php na raiz).
 
+
 ## Publicação em produção
 
-Para publicar o projeto em produção (ex: Byethost ou outro servidor), crie uma pasta `dist` ou `_dist` na raiz do projeto e coloque nela apenas os arquivos necessários para o deploy:
+Para facilitar o deploy, utilize o script de build automático:
+
+```bash
+./build_dist.sh
+```
+
+Esse script prepara a pasta `_dist` com todos os arquivos necessários para publicação:
 
 - `index.php`
 - `pages/`
 - `css/`
 - `src/`
 - `vendor/`
-- `.env` (com as configurações de produção)
+- `.env` (mantém o arquivo existente ou copia o `.env-example` caso não exista)
 - `composer.json` e `composer.lock`
 
-O arquivo `.env-example` serve como modelo de configuração. Antes de publicar, copie ou renomeie o `.env-example` para `.env` e edite com os dados do banco de dados e ambiente de produção:
+O arquivo `.env-example` serve como modelo de configuração. Antes de publicar, edite o `.env` na pasta `_dist` com os dados do banco de dados e ambiente de produção:
 
 ```
 DB_HOST=host_do_banco
@@ -53,7 +60,7 @@ DB_PASS=senha_do_banco
 APP_ENV=production
 ```
 
-Depois compacte a pasta dist/_dist e faça o upload para o servidor, extraindo os arquivos na pasta pública (ex: htdocs). Assim, qualquer pessoa pode preparar o projeto para publicação de forma organizada e segura.
+Depois compacte a pasta `_dist` e faça o upload para o servidor, extraindo os arquivos na pasta pública (ex: htdocs). Assim, qualquer pessoa pode preparar o projeto para publicação de forma organizada e segura.
 
 ---
 
