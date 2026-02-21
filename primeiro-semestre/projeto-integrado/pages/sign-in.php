@@ -136,11 +136,11 @@
       <form method="POST">
         <div class="radio-wrapper">
           <label for="radio-ra">
-            <input type="radio" name="id-type" id="radio-ra" value="ra" checked>
+            <input type="radio" name="id-type" id="radio-ra" value="ra" <?php echo (isset($_POST['id-type']) ? ($_POST['id-type'] === 'ra' ? 'checked' : '') : 'checked'); ?>>
             <span>ra</span>
           </label>
           <label for="radio-cpf">
-            <input type="radio" name="id-type" id="radio-cpf" value="cpf">
+            <input type="radio" name="id-type" id="radio-cpf" value="cpf" <?php echo (isset($_POST['id-type']) && $_POST['id-type'] === 'cpf' ? 'checked' : ''); ?>>
             <span>cpf</span>
           </label>
         </div>

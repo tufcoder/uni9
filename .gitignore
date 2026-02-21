@@ -1,3 +1,6 @@
+# Pasta de produção
+**/dist/
+
 # Logs
 *.log
 
