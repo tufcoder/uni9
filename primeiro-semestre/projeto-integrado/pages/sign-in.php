@@ -130,10 +130,11 @@
       <h1 class="title">Sign In</h1>
       <div class="error-message" role="alert">
         <?php if (isset($error)) {
-          echo '<p>' . $error . '</p>';
+          echo '<p>' . htmlspecialchars($error) . '</p>';
         } ?>
       </div>
       <form method="POST">
+        <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>">
         <div class="radio-wrapper">
           <label for="radio-ra">
             <input type="radio" name="id-type" id="radio-ra" value="ra" <?php echo (isset($_POST['id-type']) ? ($_POST['id-type'] === 'ra' ? 'checked' : '') : 'checked'); ?>>

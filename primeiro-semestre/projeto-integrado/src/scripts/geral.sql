@@ -43,6 +43,17 @@ CREATE TABLE IF NOT EXISTS students (
 	FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
+CREATE TABLE IF NOT EXISTS login_attempts (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    user_id INT NULL,
+    user_identifier VARCHAR(50) NOT NULL,
+    ip_address VARCHAR(45) NOT NULL,
+    attempt_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    success BOOLEAN NOT NULL,
+    resolved BOOLEAN NOT NULL DEFAULT 0,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
 INSERT INTO roles (role) values ('Admin');
 INSERT INTO roles (role) values ('Aluno');
 INSERT INTO roles (role) values ('Coordenador');
@@ -60,6 +71,13 @@ INSERT INTO user_roles (user_id, role_id) values (4, 4);
 INSERT INTO user_roles (user_id, role_id) values (4, 3);
 
 INSERT INTO students (user_id, ra) values (2, '1234567890');
+
+/*
+UPDATE users SET password = '$2y$10$d07nO5cp53i2aRz6tyR9vOicwh/6NE8rJGEKV9lMirgpuRurC7Ini' WHERE cpf = '12345678909';
+UPDATE users SET password = '$2y$10$XXopHe3GnNlu4xbeabFOcuq4V9FO1b/mxBk1fJprjaJcgj.s8oph2' WHERE cpf = '09876543211';
+UPDATE users SET password = '$2y$10$t63g1WJ0378k2GaCu93WT.8G3FYEvAuhZg6zceI22uJLOS2/7EIeK' WHERE cpf = '23456789010';
+UPDATE users SET password = '$2y$10$YNV9t.nWxiAHD3HIuPxcY.Vk5rqC7NHbi3owd3nRBX5CGImV8yI66' WHERE cpf = '34567890122';
+*/
 
 -- query para trazer todos os users que são students
 SELECT
