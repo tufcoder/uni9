@@ -19,7 +19,7 @@ fi
 cp index.php "$DIST/"
 cp -r pages "$DIST/"
 cp -r css "$DIST/"
-cp -r src "$DIST/"
+rsync -av --exclude='scripts' src/ "$DIST/src/"
 cp -r vendor "$DIST/"
 cp composer.json "$DIST/"
 cp composer.lock "$DIST/"
