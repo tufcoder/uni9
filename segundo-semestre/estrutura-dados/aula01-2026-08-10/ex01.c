@@ -6,7 +6,7 @@ int main(void)
     // float:   números com casas decimais
 
     // variáveis
-    float nota1, nota2, nota3, media;
+    float nota1, nota2, nota3, media = 0.0f;
 
     // Entrada de dados
     printf("Entre com a nota 1: ");

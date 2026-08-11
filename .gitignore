@@ -35,3 +35,6 @@ composer.lock
 
 # Pasta de testes
 primeiro-semestre/testes/
+
+# Arquivo compilado temporário
+*.out

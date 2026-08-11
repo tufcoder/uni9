@@ -20,7 +20,7 @@ int main(void)
     media = (notas[0] + notas[1] + notas[2]) / 3;
 
     // Saída
-    printf("\nA média final é %.1f\n", media);
+    printf("\nMédia do aluno: %.1f\n", media);
 
     return 0;
 }

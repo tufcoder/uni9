@@ -16,7 +16,7 @@ int main(void)
 
     media = soma / 3;
 
-    printf("\nA média final é %.1f\n", media);
+    printf("\nMédia do aluno: %.1f\n", media);
 
     return 0;
 }
