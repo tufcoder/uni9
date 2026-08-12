@@ -16,7 +16,7 @@ Escolha livre.
 ## Como Compilar e Executar
 
 ```bash
-gcc -Wall -Wextra -pedantic main.c && ./a.out
+gcc -Wall -Wextra -Werror -pedantic main.c && ./a.out
 ```
 
 ## Conteúdo das Aulas
@@ -28,4 +28,4 @@ Nesta aula aprendemos sobre os vetores (*arrays*) fixos com um programa de cálc
 * Demonstração de **testes de mesa**.
 * **Tipos de dados abordados:** `int` e `float`.
 * **Funções de I/O:** `printf` e `scanf`.
-* [Ver código da Aula 01](./main.c).
+* [Ver código da Aula 01](./aula01-2026-08-10/main.c).
