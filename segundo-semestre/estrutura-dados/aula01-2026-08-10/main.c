@@ -20,6 +20,7 @@ int main(void)
         if (scanf("%f", &notas[i]) != 1)
         {
             printf("Entrada inválida! Encerrando...\n");
+
             return 1;
         }
 
