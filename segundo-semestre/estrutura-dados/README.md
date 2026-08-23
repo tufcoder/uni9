@@ -2,7 +2,6 @@
 
 Usaremos a linguagem de programação C para os exemplos dessa matéria.
 
-
 ## Compiladores
 
 * [Compilador C Online](https://www.onlinegdb.com/online_c_compiler)
@@ -11,7 +10,7 @@ Usaremos a linguagem de programação C para os exemplos dessa matéria.
 
 ## Editores de Texto ou IDEs
 
-Escolha livre.
+Escolha livre. Eu estou usando o **neovim**.
 
 ## Como Compilar e Executar
 
@@ -23,14 +22,19 @@ gcc -Wall -Wextra -Werror -pedantic main.c && ./a.out
 
 ### Aula 01: Vetores
 
+> **Data:** 2026-08-10
+
 Nesta aula aprendemos sobre os vetores (*arrays*) fixos com um programa de cálculo de média de notas.
 
 * Demonstração de **testes de mesa**.
 * **Tipos de dados abordados:** `int` e `float`.
-* **Funções de I/O:** `printf` e `scanf`.
+* **Funções de I/O:**
+   * **stdio.h**: `printf` e `scanf`.
 * [Ver código da Aula 01](./aula01-2026-08-10/main.c).
 
 ### Aula 02: Continuação de Vetores
+
+> **Data:** 2026-08-17
 
 Continuando os exercícios sobre Vetores em C.
 
@@ -41,7 +45,8 @@ Continuando os exercícios sobre Vetores em C.
     * [prof01.c](./aula02-2026-08-17/prof01.c)
     * [prof02.c](./aula02-2026-08-17/prof02.c)
     * [prof03.c](./aula02-2026-08-17/prof03.c)
-* [atv01.c](./aula02-2026-08-17/atv01.c): Programa para concatenar dois vetores de inteiros de 10 elementos em um terceiro vetor de 20 elementos.
-* [atv02.c](./aula02-2026-08-17/atv02.c): Programa para varrer um vetor de inteiros e encontrar o maior elemento.
-* [atv03.c](./aula02-2026-08-17/atv03.c): Programa para ler dois inteiros A e B e calcular a diferença entre B e A e printar os valores entre eles.
-* [atv04.c](./aula02-2026-08-17/atv04.c): Programa para calcular a comissão de vendas e bônus.
+* Atividades para entrega
+   * [atv01.c](./aula02-2026-08-17/atv01.c) - Programa para concatenar dois vetores de inteiros de 10 elementos em um terceiro vetor de 20 elementos e printar o terceiro vetor com todos os elementos.
+   * [atv02.c](./aula02-2026-08-17/atv02.c) - Programa para varrer um vetor de inteiros e encontrar o maior elemento.
+   * [atv03.c](./aula02-2026-08-17/atv03.c) - Programa para ler dois inteiros A e B e calcular a diferença entre B e A e printar os valores de A até B.
+   * [atv04.c](./aula02-2026-08-17/atv04.c) - Programa para calcular a comissão de vendas de 10% e bônus de R$ 50,00 caso as vendas ultrapassem R$ 1000,00.
