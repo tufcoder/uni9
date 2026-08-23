@@ -29,3 +29,19 @@ Nesta aula aprendemos sobre os vetores (*arrays*) fixos com um programa de cálc
 * **Tipos de dados abordados:** `int` e `float`.
 * **Funções de I/O:** `printf` e `scanf`.
 * [Ver código da Aula 01](./aula01-2026-08-10/main.c).
+
+### Aula 02: Continuação de Vetores
+
+Continuando os exercícios sobre Vetores em C.
+
+* [ex01.c](./aula02-2026-08-17/ex01.c) - Programa para varrer um vetor de inteiros e achar o maior valor e imprimir o seu índice.
+* [ex02.c](./aula02-2026-08-17/ex02.c) - Programa para varrer um vetor de inteiros e achar o menor valor e imprimir o seu índice.
+* [ex03.c](./aula02-2026-08-17/ex03.c) - Programa para varrer um vetor de inteiros e multiplicar o valor de cada elemento por 10.
+* Exemplos do professor dos exercícios acima.
+    * [prof01.c](./aula02-2026-08-17/prof01.c)
+    * [prof02.c](./aula02-2026-08-17/prof02.c)
+    * [prof03.c](./aula02-2026-08-17/prof03.c)
+* [atv01.c](./aula02-2026-08-17/atv01.c): Programa para concatenar dois vetores de inteiros de 10 elementos em um terceiro vetor de 20 elementos.
+* [atv02.c](./aula02-2026-08-17/atv02.c): Programa para varrer um vetor de inteiros e encontrar o maior elemento.
+* [atv03.c](./aula02-2026-08-17/atv03.c): Programa para ler dois inteiros A e B e calcular a diferença entre B e A e printar os valores entre eles.
+* [atv04.c](./aula02-2026-08-17/atv04.c): Programa para calcular a comissão de vendas e bônus.
