@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main()
+int main(void)
 {
     float horarios[5][6] = {{0.0f}};
     float valor_sensores[2] = {0.0f};
@@ -16,8 +16,6 @@ int main()
             scanf("%f", &horarios[x][y]);
         }
     }
-   
-    printf("\n");
    
     for (int x = 0; x < 5; x++)
     {
@@ -42,7 +40,7 @@ int main()
             indices[2] = x;
         }
        
-        printf("Média do Sensor de Medição %d: %.2f\n",
+        printf("\nMédia do Sensor de Medição %d: %.2f",
                 (x + 1), valor_sensores[0]);
     }
    
@@ -52,11 +50,8 @@ int main()
     printf("Índice do horário de maior poluição: [%d] = Horário %d (%02d:00) ",
             indices[1], (indices[1] + 1), (indices[1] + 8));
     printf("do Sensor de Medição: %d\n", (indices[0] + 1));
-    printf("horarios[%d][%d] = (%02d:00): %.2f\n",
-            indices[0],
-            indices[1],
-            (indices[1] + 8),
-            horarios[indices[0]][indices[1]]
+    printf("horarios[%d][%d] = (%02d:00): %.2f\n", indices[0], indices[1],
+            (indices[1] + 8), horarios[indices[0]][indices[1]]
     );
    
     return 0;
