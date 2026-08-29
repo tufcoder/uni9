@@ -50,3 +50,14 @@ Continuando os exercícios sobre Vetores em C.
    * [atv02.c](./aula02-2026-08-17/atv02.c) - Programa para varrer um vetor de inteiros e encontrar o maior elemento.
    * [atv03.c](./aula02-2026-08-17/atv03.c) - Programa para ler dois inteiros A e B e calcular a diferença entre B e A e printar os valores de A até B.
    * [atv04.c](./aula02-2026-08-17/atv04.c) - Programa para calcular a comissão de vendas de 10% e bônus de R$ 50,00 caso as vendas ultrapassem R$ 1000,00.
+
+### Aula 03: Matrizes
+
+> **Data:** 2026-08-24
+
+Nesta aula foi demonstrado o uso de uma matriz em um exercício de Farmácia e outro exercício para
+calculo de médias e índices.
+
+* [prof01.c](./aula03-2026-08-24/prof01.c) - Exemplo do professor sobre matriz com um programa que armazena a nota de vários alunos.
+* [ex01.c](./aula03-2026-08-24/ex01.c) - Programa para armazenar e calcular o estoque de uma Farmácia.
+* [ex01v2.c](./aula03-2026-08-24/ex01v2.c) - Programa alternativo ao ex01.c

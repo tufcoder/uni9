@@ -2,8 +2,8 @@
 
 int main(void)
 {
-    int medicamentos[4][5];
-    int total_itens_estoque;
+    int medicamentos[4][5] = {{0}};
+    int total_itens_estoque = 0;
 
     for (int x = 0; x < 4; x++)
     {
