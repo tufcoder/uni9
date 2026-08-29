@@ -2,8 +2,8 @@
 
 int main(void)
 {
-    int medicamentos[4][5];
-    int total_itens_estoque;
+    int medicamentos[4][5] = {{0}};
+    int total_itens_estoque = 0;
 
     for (int x = 0; x < 4; x++)
     {
@@ -16,14 +16,14 @@ int main(void)
         }
     }
 
-    printf("\n****************************************");
-    printf("\nTOTAL DO ESTOQUE");
-    printf("\n****************************************");
-    printf("\n");
+    printf("\n****************************************\n");
+    printf("\tTOTAL DO ESTOQUE");
+    printf("\n****************************************\n");
 
     for (int x = 0; x < 4; x++)
     {
         printf("Total da Farmácia %d:\n", (x + 1));
+
         total_itens_estoque = 0;
 
         for (int y = 0; y < 5; y++)
