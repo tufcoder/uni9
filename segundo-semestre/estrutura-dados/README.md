@@ -60,4 +60,5 @@ calculo de médias e índices.
 
 * [prof01.c](./aula03-2026-08-24/prof01.c) - Exemplo do professor sobre matriz com um programa que armazena a nota de vários alunos.
 * [ex01.c](./aula03-2026-08-24/ex01.c) - Programa para armazenar e calcular o estoque de uma Farmácia.
-* [ex01v2.c](./aula03-2026-08-24/ex01v2.c) - Programa alternativo ao ex01.c
+* [ex01v2.c](./aula03-2026-08-24/ex01v2.c) - Programa alternativo ao ex01.c.
+* [ex02.c](./aula03-2026-08-24/ex02.c) - Programa para armazenar os horários de vários sensores e calcular suas médias ver o maior índice de poluição.
