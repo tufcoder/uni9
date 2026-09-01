@@ -62,3 +62,11 @@ calculo de médias e índices.
 * [ex01.c](./aula03-2026-08-24/ex01.c) - Programa para armazenar e calcular o estoque de uma Farmácia.
 * [ex01v2.c](./aula03-2026-08-24/ex01v2.c) - Programa alternativo ao ex01.c.
 * [ex02.c](./aula03-2026-08-24/ex02.c) - Programa para armazenar os horários de vários sensores e calcular suas médias ver o maior índice de poluição.
+
+### Aula 04: Matrizes
+
+> **Data:** 2026-08-31
+
+Correção do ex02 da aula passada e nova atividade para ser entregue.
+
+* [atv01.c](./aula04-2026-08-31/atv01.c) - Programa para armazenar e calcular os assentos de um avião.
