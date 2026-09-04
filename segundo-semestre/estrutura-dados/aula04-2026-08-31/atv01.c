@@ -2,13 +2,13 @@
 
 int main(void)
 {
-    int poltronas[10][4] = {0};
+    int poltronas[10][4] = {{0}};
     int opcao = 0;
     int fileira = 0;
     int poltrona = 0;
     int total_assentos_ocupados = 0;
 
-    while (1==1)
+    while (opcao != 4)
     {
         printf("\n--- MENU ---\n\n");
         printf("1 - Visualizar Mapa\n");
@@ -17,7 +17,12 @@ int main(void)
         printf("4 - Sair\n\n");
 
         printf("Digite uma opção: ");
-        scanf("%d", &opcao);
+
+        if (scanf("%d", &opcao) != 1)
+        {
+            printf("Opção inválida! Encerrando...\n");
+            return 1;
+        }
 
         switch (opcao)
         {
@@ -76,9 +81,9 @@ int main(void)
                         (float)total_assentos_ocupados / (10 * 4) * 100);
                 break;
             case 4:
-                return 0;
                 break;
             default:
+                printf("\n\n*** Digite uma opção entre 1-4 ***\n\n");
                 break;
         }
     }
