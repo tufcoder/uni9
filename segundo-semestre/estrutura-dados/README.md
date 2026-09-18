@@ -70,3 +70,12 @@ calculo de médias e índices.
 Correção do ex02 da aula passada e nova atividade para ser entregue.
 
 * [atv01.c](./aula04-2026-08-31/atv01.c) - Programa para armazenar e calcular os assentos de um avião.
+
+### Aula 05: Funções e Métodos
+
+> **Data:** 2026-09-14
+
+Demonstração de funções e métodos para encapsular a lógica.
+
+* [prof01.c](./aula05-2026-09-14/prof01.c) - Programa para calcular os gastos de água, luz e gás armazendo dados em uma matriz sem utilizar encapsulamento.
+* [prof02.c](./aula05-2026-09-14/prof02.c) - Programa para calcular os gastos de água, luz e gás armazendo dados em uma matriz utilizando encapsulamento.
