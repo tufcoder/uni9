@@ -79,3 +79,11 @@ Demonstração de funções e métodos para encapsular a lógica.
 
 * [prof01.c](./aula05-2026-09-14/prof01.c) - Programa para calcular os gastos de água, luz e gás armazendo dados em uma matriz sem utilizar encapsulamento.
 * [prof02.c](./aula05-2026-09-14/prof02.c) - Programa para calcular os gastos de água, luz e gás armazendo dados em uma matriz utilizando encapsulamento.
+
+### Aula 06: Exercícios para Funções e Métodos
+
+> **Data:** 2026-09-21
+
+Demonstração de funções e métodos para encapsular a lógica.
+
+* [ex01.c](./aula05-2026-09-21/ex01.c) - Programa para calcular os gastos de diferentes categorias e imprimir totais, médias, maior, menor e looping.
