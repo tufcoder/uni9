@@ -87,4 +87,7 @@ Demonstração de funções e métodos para encapsular a lógica.
 Demonstração de funções e métodos para encapsular a lógica.
 
 * [ex01.c](./aula06-2026-09-21/ex01.c) - Programa para calcular os gastos de diferentes categorias e imprimir totais, médias, maior, menor e looping.
-* [atv01.c](./aula06-2026-09-21/atv01.c) - Atividade para incluir lista de funcionários e calcular o saldo de férias. Exibir saldo maior e menor.
+* Atividade para entrega
+    * Atividade para incluir lista de funcionários e calcular o saldo de férias. Exibir saldo maior e menor. Atualmente tem 2 versões refatoradas.
+    * [atv01.c](./aula06-2026-09-21/atv01.c)
+    * [atv01v2.c](./aula06-2026-09-21/atv01v2.c)
