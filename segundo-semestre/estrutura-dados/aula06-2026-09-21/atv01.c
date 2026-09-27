@@ -232,7 +232,7 @@ void entrada_dados() {
     }
 }
 
-int main() {
+int main(void) {
     entrada_dados();
     print_saldo_ferias();
     maior_saldo_ferias();
