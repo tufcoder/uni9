@@ -2,9 +2,9 @@
 
 void ordem_crescente(int a, int b, int c)
 {
-    if (a < b && a < c)
+    if (a <= b && a <= c)
     {
-        if (b < c)
+        if (b <= c)
         {
             printf("Ordem crescente: %d %d %d\n", a, b, c);
         }
@@ -13,9 +13,9 @@ void ordem_crescente(int a, int b, int c)
             printf("Ordem crescente: %d %d %d\n", a, c, b);
         }
     }
-    else if (b < a && b < c)
+    else if (b <= a && b <= c)
     {
-        if (c < a)
+        if (c <= a)
         {
             printf("Ordem crescente: %d %d %d\n", b, c, a);
         }
@@ -24,9 +24,9 @@ void ordem_crescente(int a, int b, int c)
             printf("Ordem crescente: %d %d %d\n", b, a, c);
         }
     }
-    else if (c < a && c < b)
+    else if (c <= a && c <= b)
     {
-        if (a < b)
+        if (a <= b)
         {
             printf("Ordem crescente: %d %d %d\n", c, a, b);
         }
@@ -34,6 +34,10 @@ void ordem_crescente(int a, int b, int c)
         {
             printf("Ordem crescente: %d %d %d\n", c, b, a);
         }
+    }
+    else
+    {
+        printf("Ordem crescente: %d %d %d\n", a, b, c);
     }
 }
 

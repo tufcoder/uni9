@@ -7,6 +7,10 @@ float calcula_desconto(float valor, float desconto)
 
 int main(void)
 {
-    printf("Desconto aplicado de: R$ %.2f\n", calcula_desconto(100.00f, 0.1f));
+    float valor = 100.00f;
+    float desconto = 0.1f;
+
+    printf("Desconto aplicado de: R$ %.2f\n", calcula_desconto(valor, desconto));
+
     return 0;
 }

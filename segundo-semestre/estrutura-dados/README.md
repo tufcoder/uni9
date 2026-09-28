@@ -91,3 +91,12 @@ Demonstração de funções e métodos para encapsular a lógica.
     * Atividade para incluir lista de funcionários e calcular o saldo de férias. Exibir saldo maior e menor. Atualmente tem 2 versões refatoradas.
     * [atv01.c](./aula06-2026-09-21/atv01.c)
     * [atv01v2.c](./aula06-2026-09-21/atv01v2.c)
+
+> **Data:** 2026-09-28
+
+Aula sobre parâmetros.
+
+* [ex01.c](./aula07-2026-09-28/ex01.c) - Programa para criar um procedimento recebendo um parâmetro idade e imprimir: Criança, Adolescente, Adulto ou Idoso.
+* [ex02.c](./aula07-2026-09-28/ex02.c) - Programa para criar uma função que recebe dois parâmetros: valor do produto e percentual de desconto e retornar o valor  do desconto aplicado.
+* [ex03.c](./aula07-2026-09-28/ex03.c) - Programa para criar uma função que receba três números como parâmetros e retorne o maior deles.
+* [ex04.c](./aula07-2026-09-28/ex04.c) - Programa para criar uma função que receba três números inteiros e mostre os 3 números em ordem crescente.

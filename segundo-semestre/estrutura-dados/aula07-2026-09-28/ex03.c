@@ -15,7 +15,7 @@ int maior_de_tres(int a, int b, int c)
         return c;
     }
 
-    return 0;
+    return a;
 }
 
 int main(void)

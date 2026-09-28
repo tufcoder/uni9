@@ -18,5 +18,6 @@ int main(void)
     categoria_idade(17);
     categoria_idade(59);
     categoria_idade(60);
+
     return 0;
 }
