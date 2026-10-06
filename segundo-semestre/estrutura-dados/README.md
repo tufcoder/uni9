@@ -100,3 +100,12 @@ Aula sobre parâmetros.
 * [ex02.c](./aula07-2026-09-28/ex02.c) - Programa para criar uma função que recebe dois parâmetros: valor do produto e percentual de desconto e retornar o valor  do desconto aplicado.
 * [ex03.c](./aula07-2026-09-28/ex03.c) - Programa para criar uma função que receba três números como parâmetros e retorne o maior deles.
 * [ex04.c](./aula07-2026-09-28/ex04.c) - Programa para criar uma função que receba três números inteiros e mostre os 3 números em ordem crescente.
+
+> **Data:** 2026-10-05
+
+Aula sobre algoritmo de ordenação: Bubble Sort.
+
+* [ex01.c](./aula07-2026-10-05/ex01.c) - Programa para ordenar um vetor e exibir o maior e menor.
+* [ex02.c](./aula07-2026-10-05/ex02.c) - Programa para ordenar um vetor de forma decrescente e exibir o maior e menor.
+* [ex03.c](./aula07-2026-10-05/ex03.c) - Programa para ordenar um vetor de forma decrescente e exibir APROVADO se nota maior ou igual a 6, senão, REPROVADO.
+* [atv01.c](./aula07-2026-10-05/atv01.c) - Atividade para entrega.
