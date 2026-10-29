@@ -113,3 +113,15 @@ Aula sobre algoritmo de ordenação: Bubble Sort.
 * [ex02.c](./aula08-2026-10-05/ex02.c) - Programa para ordenar um vetor de forma decrescente e exibir o maior e menor.
 * [ex03.c](./aula08-2026-10-05/ex03.c) - Programa para ordenar um vetor de forma decrescente e exibir APROVADO se nota maior ou igual a 6, senão, REPROVADO.
 * [atv01.c](./aula08-2026-10-05/atv01.c) - Atividade para entrega.
+
+### Aula 09: 
+
+> **Data:** 2026-10-19
+
+### Aula 10: Métodos de Ordenação: Bubble Sort
+
+> **Data:** 2026-10-26
+
+Nesta aula tivemos um formulário de questões e atividade para entrega.
+
+* [atv01.c](./aula10-2026-10-26/atv01.c) - Atividade para entrega utilizando o algoritmo Insertion Sort.
