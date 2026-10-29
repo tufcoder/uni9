@@ -114,11 +114,19 @@ Aula sobre algoritmo de ordenação: Bubble Sort.
 * [ex03.c](./aula08-2026-10-05/ex03.c) - Programa para ordenar um vetor de forma decrescente e exibir APROVADO se nota maior ou igual a 6, senão, REPROVADO.
 * [atv01.c](./aula08-2026-10-05/atv01.c) - Atividade para entrega.
 
-### Aula 09: 
+### Aula 09: Continuação de Algoritmos de Ordenação
 
 > **Data:** 2026-10-19
 
-### Aula 10: Métodos de Ordenação: Bubble Sort
+* Bubble Sort
+* Selection Sort
+* Insertion Sort
+
+* [bubble_sort.c](./aula09-2026-10-19/bubble_sort.c) - Bubble Sort é o algoritmo com pior desempenho, sendo que trabalha de forma sequencial, comparando elementos adjacentes em pares e os troca del ugar repetidamente até que a lista esteja totalmente ordenada.
+* [selection_sort.c](./aula09-2026-10-19/selection_sort.c) - Selection Sort é o algoritmo com médio desempenho, ele varre a lista em busca do menor elemento restante e o posiciona no início da parte não ordenada a cada iteração.
+* [insertion_sort.c](./aula09-2026-10-19/insertion_sort.c) - Insertion Sort é o algoritmo com melhor desempenho, constrói a lista ordenada final, elemento por elemento, inserindo cada novo item na sua posição correta entre os anteriores já ordenados.
+
+### Aula 10: Atividade Insertion Sort
 
 > **Data:** 2026-10-26
 
