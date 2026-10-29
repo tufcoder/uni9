@@ -122,7 +122,7 @@ Aula sobre algoritmo de ordenação: Bubble Sort.
 * Selection Sort
 * Insertion Sort
 
-* [bubble_sort.c](./aula09-2026-10-19/bubble_sort.c) - Bubble Sort é o algoritmo com pior desempenho, sendo que trabalha de forma sequencial, comparando elementos adjacentes em pares e os troca del ugar repetidamente até que a lista esteja totalmente ordenada.
+* [bubble_sort.c](./aula09-2026-10-19/bubble_sort.c) - Bubble Sort é o algoritmo com pior desempenho, sendo que trabalha de forma sequencial, comparando elementos adjacentes em pares e os troca de lugar repetidamente até que a lista esteja totalmente ordenada.
 * [selection_sort.c](./aula09-2026-10-19/selection_sort.c) - Selection Sort é o algoritmo com médio desempenho, ele varre a lista em busca do menor elemento restante e o posiciona no início da parte não ordenada a cada iteração.
 * [insertion_sort.c](./aula09-2026-10-19/insertion_sort.c) - Insertion Sort é o algoritmo com melhor desempenho, constrói a lista ordenada final, elemento por elemento, inserindo cada novo item na sua posição correta entre os anteriores já ordenados.
 
